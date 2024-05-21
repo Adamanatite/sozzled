@@ -1,0 +1,61 @@
+body {
+    overflow: hidden;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.test {
+    color: blue;
+}
+
+@keyframes bulge {
+    100% {
+        height: 3000px;
+        width: 3000px;
+    }
+}
+
+@keyframes cardflip {
+    
+    100% {
+        transform: rotate3d(0, 1, 0, 180deg) translate3d(50%, -50%, 0);
+    }
+}
+
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate3d(-50%, -50%, 0);
+    animation-fill-mode: backwards;
+    height: 445px;
+    width: 320px;
+
+    background-color: rgb(234, 234, 234);
+    color: rgb(27, 27, 27);
+    border: 1px solid black;
+    animation: cardflip 1s ease 3s;
+
+}
+
+#circle-animate {
+    background-color: rgb(30, 187, 215);
+    z-index: -5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-radius: 50%;
+
+    animation: bulge 1s ease 3.2s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+}

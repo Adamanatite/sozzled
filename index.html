@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script-->
+    <script type="text/javascript" src="main.js"></script>
+    <title>Sozzled</title>
+</head>
+<body>
+
+    <h1 id="game-title">Sozzled</h1>
+
+    <h1 id="current-player"></h1>
+
+    <div class="centre" id="add-players-box">
+        <h1 class="add-players-title">Add Players</h1>
+
+        <div class="add-players-input-div">
+            <input type="text" id="add-players-input" name="player-name">
+            <button class="add-players-button" onclick="addPlayer()">Add Player</button>
+        </div>   
+       
+        <div id="player-list-div">
+            <!--
+            <div id="player-1-div">
+                <h2 class="player-name-label" id="player-1">Example</h2>
+                <button class="remove-player-button" id="remove-player-1" onclick="deletePlayer(this)">X</button>
+            </div>
+             -->
+        </div>
+       
+        <div id="start-game-button-div">
+            <button class="start-game-button" onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+
+
+
+    <div class="centre" id="card-choice-box">
+
+        <div class="card" id="card-l">
+            <h1 class="card-back-title">Card name 1</h1>
+            <button class="action-btn choose-card-btn" id="left-card-btn" onclick="chooseCard(this)">Choose</button>
+        </div>
+        <div class="card" id="card-r">
+            <h1 class="card-back-title">Card name 2</h1>
+            <button class="action-btn choose-card-btn" id="right-card-btn" onclick="chooseCard(this)">Choose</button>
+        </div>
+
+    </div>
+
+    <div class="centre" id="main-card-box">
+
+        <div class="card" id="card-main">
+            <h2 class="main-card-title">Title</h2>
+            <p class="main-card-text">This is a description of what the card will do.</p>
+        </div>
+        <button class="action-btn next-card-btn" id="right-card-btn" onclick="nextCard()">Next Card</button>
+
+    </div>
+
+
+
+</body>
+</html>
