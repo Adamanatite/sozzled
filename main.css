@@ -16,7 +16,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50%;
+    width: 70%;
     transform: translate(-50%, -50%);
     text-align: center;
     }
@@ -63,8 +63,8 @@ body {
 }
 
 .choose-card-btn {
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 60px;
     color: #101010;
     border: 1px solid #101010;
 }
@@ -80,8 +80,8 @@ body {
     display: inline-block;
 
     animation-fill-mode: backwards;
-    height: 445px;
-    width: 320px;
+    height: 556px;
+    width: 400px;
 
     background-color: rgb(248, 248, 248);
     color: rgb(10, 10, 10);
@@ -93,7 +93,7 @@ body {
 .card h1 {
     text-align: center;
     padding-top: 170px;
-    
+    font-size: 3em;
 }
 
 .card h2 {
@@ -118,7 +118,7 @@ body {
 
 #current-player {
     position: absolute;
-    bottom: 10%;
+    bottom: 3%;
     left: 50%;
     font-size: 2.5em;
     transform: translate(-50%, 0);;
@@ -144,13 +144,13 @@ body {
 }
 
 #card-main h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-top: 25px;
     margin-bottom: 60px;
 }
 
 #card-main p {
-    font-size: 1.2em;
+    font-size: 1.7em;
     margin-left: 5px;
     margin-right: 5px;
 }
