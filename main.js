@@ -97,12 +97,12 @@ function startGame() {
 
 }
 
-function chooseCard(btn) {
+function chooseCard(card) {
     
     // Make big card shit visible
     // Show the cards info
     
-    if(btn.id.substring(0, 4) === "left") {
+    if(card.id.substring(card.id.length - 1, card.id.length) === "l") {
         setCardFront(document.getElementById("card-main"), leftDeck[0]);
         leftDeck.shift();
         if (leftDeck.length === 0){
@@ -116,9 +116,6 @@ function chooseCard(btn) {
             rebalanceRightDeck()
         }
     };
-
-    console.log(leftDeck)
-    console.log(rightDeck)
 
     document.getElementById("card-choice-box").style.display = "none";
     document.getElementById("main-card-box").style.display = "block";
@@ -196,7 +193,7 @@ function shuffle(array) {
 
 
 function getShuffledCardList() {
-    const cards = [  {"Title": "Drink Once",
+    var cards = [  {"Title": "Drink Once",
                         "Description": "Take a single drink.",
                         "Category": "Standard"},
 
@@ -324,7 +321,6 @@ function getShuffledCardList() {
                         "Description": "Drink for every video game you played today.",
                         "Category": "Standard"},                 
 
-
                         {"Title": "Fun Fact",
                         "Description": "Say a fun fact or drink. The group judges how fun the fact is.",
                         "Category": "Trivia"},
@@ -334,15 +330,15 @@ function getShuffledCardList() {
                         "Category": "Trivia"},                       
 
                         {"Title": "How Many",
-                        "Description": "Within 10, how many ____ (group decides)",
+                        "Description": "Within 10, how many ____ (player decides)",
                         "Category": "Trivia"},      
                         
                         {"Title": "How Many",
-                        "Description": "Within 1000, how many ____ (group decides)",
+                        "Description": "Within 1000, how many ____ (player decides)",
                         "Category": "Trivia"},
 
                         {"Title": "How Many",
-                        "Description": "Within 1,000,000, how many ____ (group decides)",
+                        "Description": "Within 1,000,000, how many ____ (player decides)",
                         "Category": "Trivia"},
 
                         {"Title": "Few Words",
@@ -380,8 +376,6 @@ function getShuffledCardList() {
                         {"Title": "Tyrion card",
                         "Description": "Play a round of I drink and I know things.",
                         "Category": "Trivia"},
-
-
 
                         {"Title": "Categories",
                         "Description": "Films/TV shows/books that ____ e.g. feature an actor, genre.",
@@ -426,12 +420,10 @@ function getShuffledCardList() {
                         {"Title": "Name Game",
                         "Description": "Play a round of celebrity name game (player can decide a theme).",
                         "Category": "Round the Table"},
-
                         
                         {"Title": "Name Game",
                         "Description": "Play a round of celebrity name game (player can decide a theme).",
                         "Category": "Round the Table"},
-
                         
                         {"Title": "Most likely",
                         "Description": "Most likely to ____ drinks (player decides, group vote).",
@@ -496,7 +488,6 @@ function getShuffledCardList() {
                         {"Title": "Roll out",
                         "Description": "Everyone send the most recent picture from your camera roll then drink.",
                         "Category": "Round the Table"},
-,
  
                         {"Title": "First to",
                         "Description": "First to ____ gives out 3 drinks (player decides).",
@@ -717,7 +708,6 @@ function getShuffledCardList() {
                         {"Title": "Gaming",
                         "Description": "Drink for every video game you played today.",
                         "Category": "Standard"},                 
-
 
                         {"Title": "Fun Fact",
                         "Description": "Say a fun fact or drink. The group judges how fun the fact is.",
@@ -986,6 +976,10 @@ function getShuffledCardList() {
                     ]
 
     shuffle(cards)
+
+    cards = cards.filter(function( element ) {
+        return element !== undefined;
+     });
 
     return cards;
 }
