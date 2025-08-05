@@ -1,0 +1,86 @@
+Things for Sam to do:
+    -Improve cards and hints
+    -List of cards
+    -Card front designs / rules cards
+    -Packaging for box
+
+
+Website fixes:
+    -Better SVG icons/sizes for player boxes (in edit player at least)
+    -Fix magic numbers (in player input box, total main page white box size)
+    -Fix repeated variables (max player name length etc.)
+    -Move repeated code into functions (e.g. edited player and full player slot HTML changing)
+
+
+
+
+Next Steps:
+
+    -Fix homepage player slots (icons)
+
+    -Homepage infinite animations
+
+    Design:
+        -Improve card choice and active pages
+        -Finalise logo (SVG version)
+
+    -CSS/JS Refactoring (more utility classes for repeated function and avoid hard-coding values for font-size etc.)
+        -Change orderings to make sense
+        -Remove all hard-coded "magic" values (add variables for specific elements that can be changed at different resolutions maybe?)
+        -Have proper content container and background div across all pages (maybe use body for background colour?)
+        -Fix data attribute to work with everything (no specific hard-coding)
+        -Restructure JavaScript methods
+        -Add more JavaScript comments where necessary
+        -Use inset when applicable (main content box, card content)
+        -Learn/test with screenreader
+
+    -Main page
+        -Work out main content centering
+        -Implement main content designs in CSS
+        -Page transition animations
+        -Background animations
+        -Settings page JS (internal logic and animations on buttons/toggles, look at how its done by google etc)
+        -Main page input cleanup for names
+            -Strip leading and ending whitespace from player names and case-match
+            -Disallow duplicate names
+        -Test with screenreader
+
+    -Card select page
+        -Maybe horizontal version of mobile when thinner than 3 card lengths (maybe only need to switch flex direction if top/bottom are absolute)
+        -Maybe need to make images of the category names for better shadows
+        -Add functionality for editing game/players during game (reuse start game screen)
+        -Test with screenreader
+
+    -Card page
+        -Implement card design in CSS
+        -Fix word wrapping issues
+        -Can we/should we have ways of emphasising text if no bold?
+        -Add drinks indicator as visual element?
+        -JavaScript/CSS for help/rules button
+        -JavaScript/CSS for hints (rerolling hints)
+        -Test with screenreader
+
+
+Game Settings:
+    
+    -Animations on/off
+    
+    -Drink level (light, normal/medium, heavy)
+
+    -Nuclear cards on/off
+    -Force card choice?
+    -In-person cards on/off
+    -Secrets on/off
+    -Show drink levels on/off
+
+    -Expansion packs
+    -Card packs/settings (sexual on/off etc.)
+
+
+Card Ideas:
+    -Roll a dice, take that many drinks
+
+Special games:
+    -Coin flip
+    -Dice Roll
+    -RPS?

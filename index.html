@@ -1,67 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script-->
     <script type="text/javascript" src="main.js"></script>
+
     <title>Sozzled</title>
 </head>
+
+
+
 <body>
+    <div class="homepage-container">
+        <div class="centre content-container homepage-content">
+                
+                <!-- START GAME PAGE -->
+                <div class="start-main-screen">
+                    <div class="homepage-img-container">
+                        <img class="homepage-img small-gap" src="./assets/imgs/Logo.png" alt="Sozzled">
+                    </div>
 
-    <h1 id="game-title">Sozzled</h1>
+                    <div class="corner-icons-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="corner-icon rules-icon" onclick="showRules()" data-name="rules" viewBox="0 0 24 24"><path d="M24,3V20.611l-12,3.429L0,20.611V4c0-.95,.435-1.823,1.194-2.395,.249-.188,.523-.316,.806-.418V19.103l10,2.857,10-2.857V.187c.283,.102,.558,.23,.806,.418,.759,.572,1.194,1.445,1.194,2.395Zm-11,.371v14.263l-1,.286-1-.286V3.371c0-1.332-.895-2.519-2.251-2.903L7.08,.069c-1.571-.375-3.08,.817-3.08,2.432v15.213l8,2.286,8-2.286V2.535c0-1.597-1.477-2.785-3.037-2.442l-1.788,.393c-1.281,.366-2.176,1.553-2.176,2.885Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="corner-icon settings-icon" onclick="showSettings()" data-name="settings" viewBox="0 0 24 24" ><path d="M21,12a9.143,9.143,0,0,0-.15-1.645L23.893,8.6l-3-5.2L17.849,5.159A9,9,0,0,0,15,3.513V0H9V3.513A9,9,0,0,0,6.151,5.159L3.107,3.4l-3,5.2L3.15,10.355a9.1,9.1,0,0,0,0,3.29L.107,15.4l3,5.2,3.044-1.758A9,9,0,0,0,9,20.487V24h6V20.487a9,9,0,0,0,2.849-1.646L20.893,20.6l3-5.2L20.85,13.645A9.143,9.143,0,0,0,21,12Zm-6,0a3,3,0,1,1-3-3A3,3,0,0,1,15,12Z"/></svg>           
+                    </div>
 
-    <h1 id="current-player"></h1>
+                    <div class="add-players-div large-gap">
+                        <h2 class="add-players-title">ADD PLAYER:</h2> 
+                        <div class="centre-text player-div">  
+                            <input type="text" id="add-players-input" class="name-input-box"  name="player-name" placeholder="Player name" maxlength="20" onkeydown="addPlayerEnterCheck(this)">
+                            <button class="btn primary-btn add-player-btn" onclick="addPlayer()">.</button>
+                        </div>
+                    </div>
 
-    <div class="centre" id="add-players-box">
-        <h1 class="add-players-title">Add Players</h1>
+                    <div class="centre-text player-list-div large-gap"></div>
+                    <div class="main-btn-container">
+                    <button class="btn main-btn primary-btn start-game-btn" onclick="startGame()" data-permitted="false">START GAME</button>
+                    </div>
+                    <!-- <button class="btn main-btn accent-btn reset-players-btn" onclick="resetPlayers()">Reset</button> -->
 
-        <div class="add-players-input-div">
-            <input type="text" id="add-players-input" name="player-name">
-            <button class="add-players-button" onclick="addPlayer()">Add Player</button>
-        </div>   
-       
-        <div id="player-list-div">
-            <!--
-            <div id="player-1-div">
-                <h2 class="player-name-label" id="player-1">Example</h2>
-                <button class="remove-player-button" id="remove-player-1" onclick="deletePlayer(this)">X</button>
+                </div>
+
+
+                
+                    <!-- RULES PAGE -->
+                <div class="start-rules-screen">
+                    <img class="corner-img" src="./assets/imgs/Logo.png" alt="Sozzled">
+                    <h2 class="rules-heading medium-gap">RULES</h2>
+
+                    <ol class="list-text rules-text large-gap">
+                        <li class="rule small-gap">Drink responsibly. Every player must be over the legal drinking age and should agree on a limit of drinks for a player on any one turn (No more than 10). 
+                        <li class="rule small-gap"> Taking turns, players will pick a card from the left or the right deck. Do what the card says, or take two drinks to skip the card. Some cards require blanks to be filled in by the current player or the rest of the group. Examples are provided to help, but you may fill it in with whatever you like.
+                        <li class="rule">Some cards modify the game for multiple turns. Active modifiers can be found (somewhere)</li>
+                    </ol>
+                    <div class="main-btn-container">
+                        <button class="btn main-btn secondary-btn" onclick="showMainPage()">BACK</button>
+                    </div>
+                </div>
+
+
+                 <!-- SETTINGS PAGE -->
+                <div class="start-settings-screen">
+                    <img class="corner-img" src="./assets/imgs/Logo.png" alt="Sozzled">
+                            
+                    <h2 class="rules-heading medium-gap">SETTINGS</h2>
+
+                    <div class="settings-list medium-gap">
+
+                    <div class="setting-line small-gap">
+                        <p class="slider-label">Website Animations: </p>
+                        <label class="switch">
+                            <input id="animations" name="animations" type="checkbox" checked >
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <p class="settings-subheading">Drink level: </p>
+
+                    <div class="radio-line small-gap">
+                        <label class="radio-container">
+                            <input type="radio" id="light-drinks" name="drink-level">
+                            <span class="checkmark"></span>
+                            <p>Light</p>
+                        </label>
+                        <label class="radio-container">
+                            <input type="radio" id="medium-drinks" checked="checked" name="drink-level">
+                            <span class="checkmark"></span>
+                            Medium
+                        </label>
+                        <label class="radio-container">
+                            <input type="radio" id="heavy-drinks" name="drink-level">
+                            <span class="checkmark"></span>
+                            Heavy
+                        </label>
+                    </div>
+
+                    <p class="settings-subheading">Card settings: </p>
+
+                    <div class="setting-line">
+                        <p class="slider-label">In-person cards: </p>
+                        <label class="switch">
+                            <input id="in-person" name="in-person" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-line">
+                        <p class="slider-label">Nuclear cards: </p>
+                        <label class="switch">
+                            <input id="nuclear" name="nuclear" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-line">
+                        <p class="slider-label">Secret cards: </p>
+                        <label class="switch">
+                            <input id="secrets" name="secrets" type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="main-btn-container">
+                    <button class="btn main-btn third-btn" onclick="showMainPage()">BACK</button>
+                </div>
             </div>
-             -->
-        </div>
-       
-        <div id="start-game-button-div">
-            <button class="start-game-button" onclick="startGame()">Start Game</button>
         </div>
     </div>
+    
+    <!-- CHOOSE CARD PAGE -->
 
 
+    <div class="centre content-container card-choice-content">
 
-    <div class="centre" id="card-choice-box">
-
-        <div class="card" id="card-l" onclick="chooseCard(this)">
-            <h1 class="card-back-title">Card name 1</h1>
-            <!-- button class="action-btn choose-card-btn" id="left-card-btn" onclick="chooseCard(this)">Choose</button-->
-        </div>
-        <div class="card" id="card-r" onclick="chooseCard(this)">
-            <h1 class="card-back-title">Card name 2</h1>
-            <!--button class="action-btn choose-card-btn" id="right-card-btn" onclick="chooseCard(this)">Choose</button-->
+        <div class="card-choice-img-container">
+            <img class="card-choice-img medium-gap" src="./assets/imgs/Logo.png" alt="Sozzled">
         </div>
 
-    </div>
 
-    <div class="centre" id="main-card-box">
-
-        <div class="card" id="card-main">
-            <h2 class="main-card-title">Title</h2>
-            <p class="main-card-text">This is a description of what the card will do.</p>
+        <div class="cards-div large-gap">
+            <div class="card card-1" onclick="chooseCard(this)">
+                <h2 class="card-back-title bold">Card name 1</h1>
+            </div>
+            <div class="card card-2" onclick="chooseCard(this)">
+                <h2 class="card-back-title bold">Card name 2</h1>
+            </div>
         </div>
-        <button class="action-btn next-card-btn" id="right-card-btn" onclick="nextCard()">Next Card</button>
+
+        <div class="current-player-div large-gap">
+            <h2 class="current-player">Current Player</h2>
+            <button class="btn skip-btn" onclick="skipPlayer()">Skip</button>
+        </div>
 
     </div>
 
 
+     <!-- MAIN CARD PAGE -->
+
+
+    <div class="centre content-container main-card-content">
+        <div class="card-choice-img-container">
+            <img class="card-choice-img medium-gap" src="./assets/imgs/Logo.png" alt="Sozzled">
+        </div>
+        <div class="card card-main large-gap">
+            <h2 class="main-card-title bold large-gap">Card placeholder</h2>
+            <p class="main-card-text medium-gap">Describe a film/book/show in as few words as possible. The person who guesses gives out drinks depending on how many words were needed.</p>
+            <p class="main-card-hints"> E.G. Wordle, Rap battle, Race, 8 Ball Pool, Charades, Water Cup challenge, Mario kart, Chug off, 52 card pickup </p>
+        </div>
+
+        <div class="current-player-div small-gap">
+            <h2 class="current-player">Current Player</h2>
+        </div>
+
+        <div class="double-btn-div large-gap">
+            <button class="btn primary-btn next-card-btn" onclick="nextCard(this)">Next card</button>
+            <button class="btn skip-btn" onclick="nextCard(this)">Skip card</button>
+        </div>
+
+    </div>
 
 </body>
+
 </html>

@@ -55,7 +55,7 @@ body {
     margin: auto;
     border-radius: 50%;
 
-    animation: bulge 1s ease 3.2s;
+    animation: bulge 0.5s ease 3.3s;
     animation-fill-mode: forwards;
     transform-origin: center;
 }

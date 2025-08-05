@@ -1,16 +1,297 @@
 {
-    "cards" : [
-      {
-        "title": "Kill yourself",
-        "text": "Drink until you fucking die"
-      },
-      {
-        "title": "Triple drinks",
-        "text": "Drink 3 times"
-      },
-      {
-        "title": "Single drink",
-        "text": "Drink once"
-      }
+    "Categories": {
+        "0": "Challenges",
+        "1": "RTT",
+        "2": "Secret",
+        "3": "Standard",
+        "4": "Trivia"
+    },
+    "Cards": [
+        {
+            "Name": "Speedrun",
+            "Description": "First to ____ gives out two drinks",
+            "Category": 0,
+            "Level": 1,
+            "Hints": [
+                "Touch the ceiling",
+                "Touch something green",
+                "Name an album",
+                "High five someone",
+                "Do a pushup"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Speedrun",
+            "Description": "First to ____ gives out two drinks",
+            "Category": 0,
+            "Level": 1,
+            "Hints": [
+                "Spin around",
+                "Jump",
+                "Drink Twice",
+                "Spell Manoeuvre",
+                "Take a selfie",
+                "Take off a piece of clothing"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Speedrun",
+            "Description": "Last to ____ gives out two drinks",
+            "Category": 0,
+            "Level": 1,
+            "Hints": [
+                "Go to the bathroom",
+                "Breathe",
+                "Clap",
+                "Take a drink",
+                "Check their phone",
+                "Say the letter A",
+                "Blink"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Speedrun",
+            "Description": "Last to ____ drinks twice",
+            "Category": 0,
+            "Level": 1,
+            "Hints": [
+                "Arrive",
+                "Touch their toes",
+                "Name a woman",
+                "Take a drink",
+                "Compliment me",
+                "Name a song",
+                "Do a dance move"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Categories",
+            "Description": "Pick any category! First to hesitate drinks three times",
+            "Category": 1,
+            "Level": 1,
+            "Hints": [
+                "Natural disasters",
+                "Xbox games",
+                "Prime numbers",
+                "Tim Burton films",
+                "Bald people",
+                "Rappers",
+                "Currencies"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Categories",
+            "Description": "Pick any category! First to hesitate drinks three times",
+            "Category": 1,
+            "Level": 1,
+            "Hints": [
+                "Crayola colours",
+                "Alcohol brands",
+                "Romance novels",
+                "World cup winners"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Rhymes",
+            "Description": "Pick a word, take turns naming words that rhyme, first to fail drinks twice",
+            "Category": 1,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Rhymes",
+            "Description": "Pick a word, take turns naming words that rhyme, first to fail drinks twice",
+            "Category": 1,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Gamemaker",
+            "Description": "Make up a rule for the rest of the game",
+            "Category": 2,
+            "Level": 0,
+            "Hints": [
+                "Only drink with your left",
+                "No swearing",
+                "Don't say the word drink",
+                "All drinks are doubled"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Gamemaker",
+            "Description": "Make up a rule for the rest of the game",
+            "Category": 2,
+            "Level": 0,
+            "Hints": [
+                "Draw two cards each turn",
+                "No physical contact",
+                "Only call players by their last name"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Blank Card",
+            "Description": "Imitate any other card in the game or make up your own card",
+            "Category": 2,
+            "Level": 0,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Cheers!",
+            "Description": "Everyone drinks twice",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "I choose you!",
+            "Description": "Choose someone to drink once",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Double Spill",
+            "Description": "Choose two people to drink twice",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Friendly Fire",
+            "Description": "Take one drink",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Friendly Fire",
+            "Description": "Take two drinks",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Friendly Fire",
+            "Description": "Take five drinks",
+            "Category": 3,
+            "Level": 3,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Misandry",
+            "Description": "Men drink twice",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Misogyny",
+            "Description": "Women drink once",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Misanthropy",
+            "Description": "Non binary people drink once",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Wanted",
+            "Description": "The third player on your left drinks twice",
+            "Category": 3,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Collector",
+            "Description": "Everyone drinks for every ____ you own",
+            "Category": 3,
+            "Level": 2,
+            "Hints": [
+                "Plush",
+                "Instrument",
+                "Console",
+                "Bag",
+                "Hat",
+                "Lego set",
+                "Sports kit",
+                "Poster",
+                "Pet",
+                "Vinyl",
+                "Plant"
+            ],
+            "Online": true
+        },
+        {
+            "Name": "Fun Fact",
+            "Description": "Say a fun fact or drink twice",
+            "Category": 4,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "The Oscar goes to...",
+            "Description": "Act out a scene from a recent favourite book, movie, or TV show",
+            "Category": 4,
+            "Level": 2,
+            "Hints": [],
+            "Online": false
+        },
+        {
+            "Name": "Few Words",
+            "Description": "Describe a film, book, or show in as few words as possible",
+            "Category": 4,
+            "Level": 1,
+            "Hints": [],
+            "Online": true
+        },
+        {
+            "Name": "Charades",
+            "Description": "Act out a movie, no speaking!",
+            "Category": 4,
+            "Level": 2,
+            "Hints": [],
+            "Online": false
+        },
+        {
+            "Name": "History Buff",
+            "Description": "Name something important related to todays date or drink twice",
+            "Category": 4,
+            "Level": 1,
+            "Hints": [
+                "Earth Day",
+                "A song release",
+                "9/11",
+                "A film release",
+                "International Women's Day",
+                "Someones birthday"
+            ],
+            "Online": true
+        }
     ]
-  }
+}
