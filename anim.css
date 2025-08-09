@@ -1,14 +1,15 @@
 body {
     overflow: hidden;
-    background-color: red;
+    background-color: var(--clr-primary-main);
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    transition: 1s;
 }
 
-.test {
-    color: blue;
+.homepage-content {
+    display: block;
 }
 
 @keyframes bulge {

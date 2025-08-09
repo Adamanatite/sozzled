@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="anim.css">
-    <title>Document</title>
+    <!-- <script type="text/javascript" src="main.js"></script> -->
+    <script type="text/javascript" src="anim-test.js"></script>
+    <title>Animation tester</title>
 </head>
 <body>
-    <h1 class="test">Hello World</h1>
-    <div id="circle-animate"></div>
-    <div class="card">Card name</div>
+    <div class="homepage-container">
+        <div class="homepage-content">
+            <h1>Animation tester</h1>
+        </div>
+    </div>
+
+        <div class="tester-buttons">
+            <button class="btn homepage" onClick="homepageTest()">Homepage</button>
+            <button class="btn rules" onClick="rulesTest()">Rules</button>
+            <button class="btn settings" onClick="settingsTest()">Settings</button>
+            <button class="btn store" onClick="storeTest()">Store</button>
+            <button class="btn toggle-main" onClick="toggleMainCard()">Toggle main card</button>
+        </div>
+
 </body>
 </html>
