@@ -12,51 +12,79 @@ body {
     display: block;
 }
 
-@keyframes bulge {
+.homepage-bubble {
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+    left: 46%;
+    background-color: var(--clr-primary-background);
+    border-radius: 100%;
+    animation-name: bubble-up;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes bubble-up {
+    0% {
+        bottom: -5rem;
+    }
+
     100% {
-        height: 3000px;
-        width: 3000px;
+        bottom: calc(100% + 5rem);
     }
 }
 
-@keyframes cardflip {
-    
+@keyframes grow {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        stroke-width: 0;
+    }
+
     100% {
-        transform: rotate3d(0, 1, 0, 180deg) translate3d(50%, -50%, 0);
+        transform: translate(-50%, -50%) scale(5);
+        stroke-width: 5;
     }
 }
 
+.dark-green-circle {
 
-.card {
-    position: absolute;
-    top: 50%;
+    z-index: -1;
+    position: fixed;
     left: 50%;
-    
-    transform: translate3d(-50%, -50%, 0);
-    animation-fill-mode: backwards;
-    height: 445px;
-    width: 320px;
+    top: 50%;
+    height: 50vw;
+    width: 50vw;
 
-    background-color: rgb(234, 234, 234);
-    color: rgb(27, 27, 27);
-    border: 1px solid black;
-    animation: cardflip 1s ease 3s;
+    transform: translate(-50%, -50%) scale(0);
+
+    animation-name: grow;
+    animation-duration: 25s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
 
 }
 
-#circle-animate {
-    background-color: rgb(30, 187, 215);
-    z-index: -5;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    border-radius: 50%;
+.circle-1 {
 
-    animation: bulge 0.5s ease 3.3s;
-    animation-fill-mode: forwards;
-    transform-origin: center;
+    animation-delay: 5000ms;
+
+}
+
+.circle-3 {
+
+    animation-delay: -5000ms;
+
+}
+
+.circle-4 {
+
+    animation-delay: -10000ms;
+
+}
+
+.circle-5 {
+
+    animation-delay: -15000ms;
+
 }

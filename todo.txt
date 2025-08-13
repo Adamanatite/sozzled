@@ -16,6 +16,9 @@ Website fixes:
 
 Next Steps:
 
+    -Make rules animation perfectly loop
+    -Tweak exact values to make the circles look nice (ideally increase distance between far ones and decrease between central ones)
+
     -Fix homepage player slots (icons)
 
     -Homepage infinite animations
